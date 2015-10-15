@@ -6,6 +6,7 @@ describe 'creating a sentance' do
     login_as(user, :scope => :user)
     story = FactoryGirl.create(:story, id: 1)
     visit '/stories/1'
+save_and_open_page    
     click_link("Add to Story", :match => :first)
     click_link 'Random Image'
     fill_in 'sentence_content', with: 'stuff'
